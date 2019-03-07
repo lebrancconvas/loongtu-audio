@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LoongTU</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="loongtu.jpg" type="image/jpg">
+    <link href="https://fonts.googleapis.com/css?family=Athiti|Itim|Maitree|Sriracha" rel="stylesheet">
+    <style>
+        html {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: linear-gradient(-90deg, rgb(45, 134, 45), rgb(95, 168, 93));
+        }
+
+        #box {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.70);
+            width: 400px;
+            height: 400px;
+            transition: 0.2s;
+            transform: scale(1);
+        }
+
+        #box:hover {
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        #box:active {
+            box-shadow: 1px 1px rgba(0, 0, 0, 0.40);
+            transform: scale(.97);
+        }
+
+        #loongtu {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #caption>p {
+            font-family: 'Sriracha', cursive;
+            font-size: 16px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <audio src="mycountryhas.mp3" id="mysong"></audio>
+    <div id="box" onclick="playSong()">
+        <img src="loongtu.jpg" alt="loongtu" id="loongtu">
+        <div id="caption">
+            <p>สวัสดีครับ ผมตู่คุงนะครับ<br>กดที่กล่องนี้แล้วเพลงสรรเสริญตู่คุงจะบรรเลงขึ้นเอง</p>
+        </div>
+    </div>
+    <script>
+        var song = document.getElementById('mysong')
+
+        function playSong() {
+            if (song.paused) {
+                song.play();
+            } else if (song.played) {
+                song.pause();
+            }
+        }
+    </script>
+</body>
+
+</html>
