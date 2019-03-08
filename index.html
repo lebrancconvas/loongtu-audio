@@ -70,7 +70,7 @@
         var song = document.getElementById('mysong')
 
         function playSong() {
-            if (song.paused) {
+            if (song.paused || song.stopped) {
                 song.play();
             } else if (song.played) {
                 song.pause();
